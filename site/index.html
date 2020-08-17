@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Narrow it down!</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body ng-app="myApp">
+	<h1 class="text-center">Narrow list for Chinese Menu</h1>
+	<div ng-controller="narrowListController as list" class="Narrow">
+		<div class="narrowlist">
+		<input type="text" name="Narrow it down" ng-model="list.narrow" class="form-control" placeholder="Search..."><br>
+		<button ng-click="list.searchNarrowList()" class="btn btn-primary">Narrow it Down for Me</button>
+	    </div>
+
+		<div >
+			<narrow-list my-list="list"></narrow-list>
+		</div>
+	</div>
+</body>
+</html>

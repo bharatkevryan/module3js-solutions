@@ -1,0 +1,8 @@
+<ol class="list-group">
+				<li class="list-group-item" ng-repeat="item in list.itemList">	
+					{{item.name}} : {{item.description}} 
+					<button ng-click="list.removeItems($index)">Don't want this one!!</button>
+					
+				</li>
+				<h3 ng-if="list.isEmptyItems()" class="text-center"> Nothing to show</h3>
+</ol>
